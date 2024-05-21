@@ -38,7 +38,7 @@ tuple<int, int> dividir(vector<int> & v, int d, int h){
 
 
 void quicksort(vector<int> & v, int d, int h){
-    if(d < h - 2){
+    if(d < h - 1){
         tuple<int, int> pos_tupla = dividir(v, d, h);
         int pos = get<0>(pos_tupla);
         int pos2 = get<1>(pos_tupla);
@@ -49,7 +49,10 @@ void quicksort(vector<int> & v, int d, int h){
 }
 
 int main() {
-    vector<int> a = {7, 41, 2, 50, 59, 280, 123, 388};
+    vector<int> a = {123, 7, 388, 41, 2, 280, 50, 59};
+    tuple<int, int> b = dividir(a, 0, 4);
+    cout << get<0>(b) << get<1>(b) << endl;
+
     quicksort(a, 0, a.size());
     for (int i = 0; i < a.size(); i++) {
         cout << a[i] << " ";
