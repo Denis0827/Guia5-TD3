@@ -6,8 +6,7 @@ using namespace std;
 // Ejercicio 1
 
 vector<int> interseccion_ordenada(const vector<int> &v1, const vector<int> &v2) {
-    int i = 0; int j = 0;
-    vector<int> res = {};
+    int i = 0; int j = 0; vector<int> res = {};
     
     while(i < v1.size() && j < v2.size()) {
         if(v1[i] == v2[j]) {
